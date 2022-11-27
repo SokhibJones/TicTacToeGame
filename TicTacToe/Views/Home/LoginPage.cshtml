@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="container mt-auto mb-auto">
+    <form method="get" asp-controller="Home" asp-action="Index">
+        <div class="form-group row">
+            <label class="col-form-label col-sm-3" for="player1Name"><i class="bi bi-x-circle"></i> Player Name</label>
+            <div class="col-sm-9">
+                <input class="form-control-plaintext border rounded" type="text" id="player1Name" name="xPlayer" required/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-sm-3" for="player2Name"><i class="bi bi-circle"></i> Player Name</label>
+            <div class="col-sm-9">
+                <input class="form-control-plaintext border rounded" type="text" id="player2Name" name="oPlayer" required/>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary text-center mt-1 w-100">Start</button>
+    </form>
+</div>
+
+@section styles {
+    <link href="@Url.Content("~/styles/tictactoe.css")" rel="stylesheet" type="text/css" />
+}
